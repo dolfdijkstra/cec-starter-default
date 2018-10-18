@@ -1,0 +1,43 @@
+{
+  "name": "cec-starter-default",
+  "description": "Gatsby default starter for CEC",
+  "version": "1.0.0",
+  "author": "Dolf Dijkstra",
+  "dependencies": {
+    "fs-extra": "^7.0.0",
+    "gatsby": "^2.0.0",
+    "gatsby-image": "^2.0.15",
+    "gatsby-plugin-manifest": "^2.0.2",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.7",
+    "gatsby-plugin-typography": "^2.2.0",
+    "gatsby-source-filesystem": "^2.0.4",
+    "gatsby-transformer-sharp": "^2.1.4",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17",
+    "typography-theme-us-web-design-standards": "^0.16.9"
+  },
+  "keywords": [
+    "gatsby", "cec"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "prettier-standard": "^8.0.1",
+    "standard": "^12.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dolfdijkstra/cec-starter-default"
+  }
+}
