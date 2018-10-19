@@ -23,8 +23,8 @@ const Product = ({ node }) => {
 const IndexPage = ({ data }) => (
   <Layout
     siteTitle={data.site.siteMetadata.title}
-    siteDescription="Starter"
-    language="en"
+    siteDescription='Starter'
+    language='en'
   >
     <h1>CEC sample site</h1>
     {data.allProduct.edges.map(({ node }) => (

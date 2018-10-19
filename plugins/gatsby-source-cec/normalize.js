@@ -144,8 +144,8 @@ const extractFormats_old = (rendition, children, childrenNodes, mediaFiles) => {
         internal: {
           type: 'RenditionFormat',
           contentDigest: digest(JSON.stringify({ child })),
-          mediaType: child.format,
-        },
+          mediaType: child.format
+        }
       }
       mediaFiles.push({ id, href: child.href, mediaType: child.mediaType })
       children.push(id)
@@ -175,8 +175,8 @@ const extractRenditions_old = (item, children, childrenNodes, mediaFiles) => {
       parent: item.id,
       internal: {
         type: 'Rendition',
-        contentDigest: digest(JSON.stringify({ name, type, formats })),
-      },
+        contentDigest: digest(JSON.stringify({ name, type, formats }))
+      }
     }
     children.push(rendition.id)
     childrenNodes.unshift(node)
@@ -219,7 +219,7 @@ exports.downloadMediaFiles = async ({
   cache,
   createNode,
   createNodeId,
-  touchNode,
+  touchNode
 }) =>
   Promise.all(
     entities.map(async e => {
@@ -244,7 +244,7 @@ exports.downloadMediaFiles = async ({
               store,
               cache,
               createNode,
-              createNodeId,
+              createNodeId
             })
             // console.log(`fileNode mediaFile`, pretty(fileNode))
 
@@ -253,7 +253,7 @@ exports.downloadMediaFiles = async ({
 
               await cache.set(mediaDataCacheKey, {
                 fileNodeID,
-                updatedDate: e.updatedDate,
+                updatedDate: e.updatedDate
               })
             }
           } catch (e) {
@@ -288,8 +288,8 @@ exports.createNodesFromEntities = (entities, createNode) => {
       parent: null,
       internal: {
         type,
-        contentDigest: digest(JSON.stringify(entity)),
-      },
+        contentDigest: digest(JSON.stringify(entity))
+      }
     }
     createNode(node)
     childrenNodes.forEach(child => {

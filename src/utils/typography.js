@@ -3,8 +3,8 @@ import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards'
 
 usWebDesignStandardsTheme.overrideThemeStyles = () => ({
   'a.gatsby-resp-image-link': {
-    boxShadow: 'none',
-  },
+    boxShadow: 'none'
+  }
 })
 
 delete usWebDesignStandardsTheme.googleFonts

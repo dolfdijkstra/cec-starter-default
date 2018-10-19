@@ -29,7 +29,7 @@ exports.sourceNodes = async (
     cache,
     createNode,
     createNodeId,
-    touchNode,
+    touchNode
   })
   normalize.createNodesFromEntities(entities, createNode)
 }

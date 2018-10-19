@@ -37,11 +37,11 @@ exports.all = async (contentServer, channelToken, fromCache) => {
     const response = await fetch(allItemsUrl)
     // Parse the response as JSON
     try {
-    const data = await response.json()
-    console.log(JSON.stringify(data,null,2))
-    await fs.writeFile('.data/items.json', JSON.stringify(data), 'utf-8')
-    return Promise.all(data.items.map(e => e.id).map(fetchItem))
-    }catch(err){
+      const data = await response.json()
+      console.log(JSON.stringify(data, null, 2))
+      await fs.writeFile('.data/items.json', JSON.stringify(data), 'utf-8')
+      return Promise.all(data.items.map(e => e.id).map(fetchItem))
+    } catch (err) {
       console.log(response)
       throw err
     }

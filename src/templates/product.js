@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 
 class ProductDetailPageTemplate extends React.Component {
-  render() {
+  render () {
     const product = this.props.data.product
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteDescription = product.product_description
@@ -26,7 +26,7 @@ class ProductDetailPageTemplate extends React.Component {
             ...scale(-1 / 5),
             display: 'block',
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-1)
           }}
         >
           {product.updatedDate}
@@ -37,7 +37,7 @@ class ProductDetailPageTemplate extends React.Component {
         />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(1)
           }}
         />
 
@@ -47,19 +47,19 @@ class ProductDetailPageTemplate extends React.Component {
             flexWrap: 'wrap',
             justifyContent: 'space-between',
             listStyle: 'none',
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
             {previous && (
-              <Link to={previous.slug} rel="prev">
+              <Link to={previous.slug} rel='prev'>
                 ← {previous.product_title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.slug} rel="next">
+              <Link to={next.slug} rel='next'>
                 {next.product_title} →
               </Link>
             )}
