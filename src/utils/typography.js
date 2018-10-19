@@ -1,6 +1,13 @@
 import Typography from 'typography'
 import usWebDesignStandardsTheme from 'typography-theme-us-web-design-standards'
 
+/*
+,
+  'h3': {
+  fontFamily: ['Oswald', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+  }
+  */
+
 usWebDesignStandardsTheme.overrideThemeStyles = () => ({
   'a.gatsby-resp-image-link': {
     boxShadow: 'none'

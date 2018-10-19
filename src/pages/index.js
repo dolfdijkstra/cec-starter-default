@@ -3,14 +3,16 @@ import { Link, graphql } from 'gatsby'
 import GatsbyImage from 'gatsby-image'
 
 import Layout from '../components/layout'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
 
 const Product = ({ node }) => {
   return (
     <div style={{ margin: 16 }}>
-      <h3>{node.product_title}</h3>
+      <h3 style={{ color: "red", fontSize: "3em" }}>{node.product_title}</h3>
       <div>
         <Link to={node.slug}>
-          {node.product_short_title} {node.language}
+          {node.product_short_title}
         </Link>
         <GatsbyImage
           fluid={node.product_main_image.localFile.childImageSharp.fluid}
@@ -27,9 +29,11 @@ const IndexPage = ({ data }) => (
     language='en'
   >
     <h1>CEC sample site</h1>
-    {data.allProduct.edges.map(({ node }) => (
-      <Product node={node} key={node.id} />
-    ))}
+    <Carousel showArrows={false} showThumbs={false} infiniteLoop={true} autoPlay={false}>
+      {data.allProduct.edges.map(({ node }) => (
+        <Product node={node} key={node.id} />
+      ))}
+    </Carousel>
   </Layout>
 )
 

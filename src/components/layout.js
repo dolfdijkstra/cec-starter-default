@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import '../utils/typography'
 
 import Header from './header'
-// import { rhythm, scale } from '../utils/typography'
 
 const Layout = ({ children, siteTitle, language, siteDescription }) => (
-  <>'    \' \'
-   '<Helmet
+  <React.Fragment>
+   <Helmet
     title={siteTitle}
     meta={[{ name: 'description', content: siteDescription }]}
     htmlAttributes={{ lang: language }}
-  />'    \' '<Header siteTitle={siteTitle} />' '
+  />
+  <Header siteTitle={siteTitle} />
     <div
       style={{
         margin: '0 auto',
@@ -21,8 +22,8 @@ const Layout = ({ children, siteTitle, language, siteDescription }) => (
       }}
     >
       {children}
-    </div>'    \' \'
- '</>
+    </div>
+  </React.Fragment>
 )
 
 Layout.propTypes = {
