@@ -5,7 +5,7 @@
   "author": "Dolf Dijkstra",
   "dependencies": {
     "fs-extra": "^7.0.0",
-    "gatsby": "^2.0.0",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-offline": "^3.0.35",
